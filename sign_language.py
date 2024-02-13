@@ -22,7 +22,8 @@ while True:
             lm_list=[]
             for id ,lm in enumerate(hand_landmark.landmark):
                 lm_list.append(lm)
-
+                
+            finger_fold_status=[]
             for tip in finger_tips:
                x,y = int(lm_list[tip].X*w),int(lm_list[tip].y*h)
                cv2.circle(img,(x,y),15,(255,0,0),cv2.FILLED)
